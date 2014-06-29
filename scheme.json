@@ -2,7 +2,6 @@
   "name": "justFM",
 
   "buildDir": "bin",
-  "buildFileName": "fm.js",
 
   "compilerOptions": {
     "compilationLevel": "SIMPLE_OPTIMIZATIONS",
@@ -14,16 +13,20 @@
   "srcDir": "lib",
   "rootNamespace": "fm",
 
-  "src": [
-    "fm.js",
-    "i-accumulator.js",
-    "i-iterator.js",
-    "atom-accumulator.js",
-    "list-accumulator.js",
-    "array-iterator.js",
-    "list/list.js",
-    "acts/acts.js"
-  ],
+  "modules": {
+    "fm": {
+      "src": [
+        "fm.js",
+        "i-accumulator.js",
+        "i-iterator.js",
+        "atom-accumulator.js",
+        "list-accumulator.js",
+        "array-iterator.js",
+        "list/list.js",
+        "acts/acts.js"
+      ]
+    }
+  },
 
   "externs": "externs",
 
