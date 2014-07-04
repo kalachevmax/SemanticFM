@@ -23,7 +23,8 @@
         "list-accumulator.js",
         "array-iterator.js",
         "list/list.js",
-        "acts/acts.js"
+        "acts/acts.js",
+        "log/log.js"
       ]
     }
   },
