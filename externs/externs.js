@@ -50,24 +50,6 @@ fm.Script;
 
 
 /**
- * @type {!Object.<string, fm.Input>}
- */
-fm.__dm = {};
-
-
-/**
- * @type {!Object.<string, !Function>}
- */
-fm.__symbols = {};
-
-
-/**
- * @type {!Object.<string, fm.Action>}
- */
-fm.__procedures = {};
-
-
-/**
  *
  */
 fm.nop = function() {};
@@ -157,74 +139,6 @@ fm.async = function(syncFn) {};
 
 
 /**
- * @param {string} key
- * @param {fm.Input} value
- */
-fm.set = function(key, value) {};
-
-
-/**
- * @param {string} key
- * @param {string=} opt_subkey
- * @return {fm.Input}
- */
-fm.get = function(key, opt_subkey) {};
-
-
-/**
- * @param {string} key
- * @param {string=} opt_subkey
- * @return {fm.Input}
- */
-fm.inc = function(key, opt_subkey) {};
-
-
-/**
- * @param {string} key
- * @param {string=} opt_subkey
- * @return {fm.Input}
- */
-fm.dec = function(key, opt_subkey) {};
-
-
-/**
- * @param {string} key
- * @param {fm.Input=} opt_value
- * @return {fm.Action}
- */
-fm.assign = function(key, opt_value) {};
-
-
-/**
- * @param {string} key
- * @param {string} subkeyOrType
- * @param {*} type
- */
-fm.assert = function(key, subkeyOrType, type) {};
-
-
-/**
- * @param {string} symbol
- * @param {!Function} fn
- */
-fm.define = function(symbol, fn) {};
-
-
-/**
- * @param {string} name
- * @param {fm.Action} action
- */
-fm.proc = function(name, action) {};
-
-
-/**
- * @param {string} name
- * @return {fm.Action}
- */
-fm.invoke = function(name) {};
-
-
-/**
  * @param {fm.Script} script
  * @return {fm.Action}
  */
@@ -301,8 +215,6 @@ fm.ArrayIterator.prototype.hasNext = function() {};
  * @return {fm.Input}
  */
 fm.ArrayIterator.prototype.next = function() {};
-
-
 
 
 /**
