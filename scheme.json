@@ -32,6 +32,6 @@
   "externsDir": "externs",
 
   "deps": {
-    "justDM": "https://github.com:kalachevmax/justDM"
+    "justAM": "https://github.com:kalachevmax/justAM"
   }
 }
