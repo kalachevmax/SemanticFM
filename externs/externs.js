@@ -26,7 +26,7 @@ fm.Input;
 
 
 /**
- * @typedef {!Array.<fm.Input>}
+ * @typedef {Array.<fm.Input>}
  */
 fm.List;
 
@@ -139,6 +139,69 @@ fm.async = function(syncFn) {};
 
 
 /**
+ * @interface
+ */
+fm.IAccumulator = function() {};
+
+
+/**
+ * @return {fm.Input}
+ */
+fm.IAccumulator.prototype.get = function() {};
+
+
+/**
+ * @param {fm.Input} data
+ */
+fm.IAccumulator.prototype.update = function(data) {};
+
+
+/**
+ * @constructor
+ * @implements {fm.IAccumulator}
+ * @param {fm.Input} data
+ */
+fm.Accumulator = function(data) {};
+
+
+/**
+ * @inheritDoc
+ */
+fm.Accumulator.prototype.get = function() {};
+
+
+/**
+ * @inheritDoc
+ */
+fm.Accumulator.prototype.update = function(data) {};
+
+
+
+/**
+ * @interface
+ */
+fm.IIterator = function() {};
+
+
+/**
+ * @return {boolean}
+ */
+fm.IIterator.prototype.hasNext = function() {};
+
+
+/**
+ * @return {fm.Input}
+ */
+fm.IIterator.prototype.next = function() {};
+
+
+/**
+ *
+ */
+fm.IIterator.prototype.destroy = function() {};
+
+
+/**
  * @param {fm.Script} script
  * @return {fm.Action}
  */
@@ -200,79 +263,27 @@ fm.list.fork = function(list) {};
 /**
  * @constructor
  * @implements {fm.IIterator}
- * @param {!Array} array
+ * @param {fm.List} list
  */
-fm.ArrayIterator = function(array) {};
+fm.list.Iterator = function(list) {};
 
 
 /**
  * @return {boolean}
  */
-fm.ArrayIterator.prototype.hasNext = function() {};
+fm.list.Iterator.prototype.hasNext = function() {};
 
 
 /**
  * @return {fm.Input}
  */
-fm.ArrayIterator.prototype.next = function() {};
+fm.list.Iterator.prototype.next = function() {};
 
 
 /**
- * @constructor
- * @implements {fm.IAccumulator}
- * @param {fm.Input} atom
+ *
  */
-fm.AtomAccumulator = function(atom) {};
-
-
-/**
- * @inheritDoc
- */
-fm.AtomAccumulator.prototype.get = function() {};
-
-
-/**
- * @inheritDoc
- */
-fm.AtomAccumulator.prototype.update = function(data) {};
-
-
-
-
-/**
- * @interface
- */
-fm.IAccumulator = function() {};
-
-
-/**
- * @return {fm.Input}
- */
-fm.IAccumulator.prototype.get = function() {};
-
-
-/**
- * @param {fm.Input} data
- */
-fm.IAccumulator.prototype.update = function(data) {};
-
-
-/**
- * @interface
- */
-fm.IIterator = function() {};
-
-
-/**
- * @return {boolean}
- */
-fm.IIterator.prototype.hasNext = function() {};
-
-
-/**
- * @return {fm.Input}
- */
-fm.IIterator.prototype.next = function() {};
+fm.list.Iterator.prototype.destroy = function() {};
 
 
 /**
@@ -280,16 +291,16 @@ fm.IIterator.prototype.next = function() {};
  * @implements {fm.IAccumulator}
  * @param {fm.List} list
  */
-fm.ListAccumulator = function(list) {};
+fm.list.Accumulator = function(list) {};
 
 
 /**
  * @inheritDoc
  */
-fm.ListAccumulator.prototype.get = function() {};
+fm.list.Accumulator.prototype.get = function() {};
 
 
 /**
  * @inheritDoc
  */
-fm.ListAccumulator.prototype.update = function(data) {};
+fm.list.Accumulator.prototype.update = function(data) {};

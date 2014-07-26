@@ -1,5 +1,5 @@
 {
-  "name": "justFM",
+  "name": "semantic.fm",
 
   "buildDir": "bin",
 
@@ -14,14 +14,14 @@
   "rootNamespace": "fm",
 
   "modules": {
-    "fm": {
+    "semantic.fm": {
       "src": [
         "fm.js",
         "i-accumulator.js",
         "i-iterator.js",
-        "atom-accumulator.js",
-        "list-accumulator.js",
-        "array-iterator.js",
+        "accumulator.js",
+        "list/accumulator.js",
+        "list/iterator.js",
         "list/list.js",
         "acts/acts.js",
         "log/log.js"
@@ -29,9 +29,7 @@
     }
   },
 
-  "externsDir": "externs",
+  "externs": "externs",
 
-  "deps": {
-    "justAM": "https://github.com:kalachevmax/justAM"
-  }
+  "deps": {}
 }
