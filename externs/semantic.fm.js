@@ -3,6 +3,12 @@
 /**
  * @namespace
  */
+var fm = {};
+
+
+/**
+ * @namespace
+ */
 fm.acts = {};
 
 
