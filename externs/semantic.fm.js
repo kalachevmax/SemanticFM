@@ -138,6 +138,14 @@ fm.async = function(syncFn) {};
 
 
 /**
+ * @param {fm.ConditionAction} condition
+ * @return {fm.ConditionAction|function(function(boolean),
+ * function(string, number=), fm.Input)}
+ */
+fm.not = function(condition) {};
+
+
+/**
  * @interface
  */
 fm.IAccumulator = function() {};
