@@ -31,7 +31,7 @@ fm.List;
 
 
 /**
- * @typedef {function(!Function, !Function, fm.Input=)}
+ * @typedef {function(!Function, !Function, fm.Input)}
  */
 fm.Action;
 
@@ -52,6 +52,14 @@ fm.Script;
  *
  */
 fm.nop = function() {};
+
+
+/**
+ * @param {function(fm.Input)} complete
+ * @param {function(string, number=)} cancel
+ * @param {fm.Input} input
+ */
+fm.noact = function(complete, cancel, input) {};
 
 
 /**
