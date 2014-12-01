@@ -22,6 +22,7 @@
         "accumulator.js",
         "list/accumulator.js",
         "list/iterator.js",
+        "script-iterator.js",
         "type.js",
         "scope.js",
         "args.js",
