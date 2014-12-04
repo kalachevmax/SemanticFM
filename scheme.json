@@ -23,6 +23,9 @@
         "list/accumulator.js",
         "list/iterator.js",
         "type.js",
+        "i-type-provider.js",
+        "i-atom-provider.js",
+        "i-list-provider.js",
         "list/list.js",
         "acts/acts.js",
         "log/log.js"
