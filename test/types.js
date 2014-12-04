@@ -2,10 +2,7 @@
 
 var script = fm.STRING([
   fm.STRING('types rocks!'),
-  fm.fold,
-
   fm.NUMBER(123),
-  fm.fold,
 
   fm.LIST(fm.Type.STRING, ['a', 'b', 'c']),
   fm.fold,
