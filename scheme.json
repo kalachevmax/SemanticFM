@@ -11,27 +11,21 @@
   },
 
   "srcDir": "lib",
-  "rootNamespace": "fm",
+  "rootNamespace": "",
 
   "modules": {
     "semantic.fm": {
       "src": [
-        "fm.js",
-        "i-accumulator.js",
-        "i-iterator.js",
-        "accumulator.js",
-        "list/accumulator.js",
-        "list/iterator.js",
-        "atom.js",
-        "type.js",
-        "list.js",
-        "i-type-provider.js",
-        "i-atom-provider.js",
-        "i-list-provider.js",
-        "list-provider.js",
-        "list/list.js",
-        "acts/acts.js",
-        "log/log.js"
+        "types/type.js",
+        "fm/fm.js",
+        "fm/i-accumulator.js",
+        "fm/i-iterator.js",
+        "fm/accumulator.js",
+        "fm/list/accumulator.js",
+        "fm/list/iterator.js",
+        "fm/list/list.js",
+        "fm/acts/acts.js",
+        "fm/log/log.js"
       ]
     }
   },
